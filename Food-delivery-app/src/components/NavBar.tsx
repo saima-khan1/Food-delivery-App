@@ -1,5 +1,8 @@
 import { assets } from "../assets/frontend_assets/assets";
+import Cart from "./Cart";
 import SearchBar from "./SearchBar";
+import SignIn from "./SignIn";
+import ThemeToggle from "./ThemeToggle";
 
 const NavBar = () => {
   return (
@@ -16,6 +19,11 @@ const NavBar = () => {
         </div>
         <div className="absolute left-1/2 transform -translate-x-1/2 w-full max-w-xl">
           <SearchBar />
+        </div>
+        <div className="flex items-center ml-auto gap-4">
+          <SignIn />
+          <Cart />
+          <ThemeToggle />
         </div>
       </div>
     </nav>
