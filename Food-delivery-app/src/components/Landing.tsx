@@ -1,4 +1,5 @@
 import FoodCategory from "./FoodCategory";
+import FoodList from "./FoodList";
 import NavBar from "./NavBar";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <NavBar />
       <FoodCategory />
+      <FoodList />
     </div>
   );
 };
