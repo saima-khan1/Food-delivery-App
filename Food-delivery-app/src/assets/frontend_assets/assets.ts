@@ -60,6 +60,7 @@ import bag_icon from "./bag_icon.png";
 import logout_icon from "./logout_icon.png";
 import parcel_icon from "./parcel_icon.png";
 import logo_icon from "./logo_icon.png";
+import { MenuItem } from "../../types";
 
 export const assets = {
   logo,
@@ -84,7 +85,7 @@ export const assets = {
   logo_icon,
 };
 
-export const menu_list = [
+export const menu_list: MenuItem[] = [
   {
     menu_name: "Salad",
     menu_image: menu_1,
