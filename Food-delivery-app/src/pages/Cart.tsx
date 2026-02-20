@@ -1,11 +1,7 @@
 import FoodCategory from "../components/FoodCategory";
 
 const Cart = () => {
-  return (
-    <div>
-      <FoodCategory />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Cart;

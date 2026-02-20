@@ -1,10 +1,18 @@
 import { food_list } from "../assets/frontend_assets/assets";
 
-const FoodList = () => {
+type Props = {
+  category: string;
+};
+
+const FoodList = ({ category }: Props) => {
+  const filteredFood =
+    category === "All"
+      ? food_list
+      : food_list.filter((food) => food.category === category);
   return (
     <div className="p-6">
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {food_list.map((food) => (
+        {filteredFood.map((food) => (
           <li
             key={food._id}
             className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden"

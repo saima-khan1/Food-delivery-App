@@ -1,6 +1,11 @@
+import { Dispatch } from "react";
 import { menu_list } from "../assets/frontend_assets/assets";
 
-const FoodCategory = () => {
+type Props = {
+  setCategory: React.Dispatch<React.SetStateAction<string>>;
+};
+
+const FoodCategory = ({ setCategory }: Props) => {
   return (
     <div className="p-6">
       <div className="text-center mb-10">
@@ -17,7 +22,11 @@ const FoodCategory = () => {
 
       <ul className="grid grid-cols-1 md:grid-cols-8 gap-6">
         {menu_list.map((menu) => (
-          <li key={menu.menu_name} className="flex flex-col items-center ">
+          <li
+            key={menu.menu_name}
+            onClick={() => setCategory(menu.menu_name)}
+            className="flex flex-col items-center "
+          >
             <img
               src={menu.menu_image}
               alt={menu.menu_name}
